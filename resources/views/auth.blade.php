@@ -5,12 +5,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Laravel</title>
         <link rel="stylesheet" href="{{ asset('assets/tailwind.min.css') }}" />
+        <link rel="stylesheet" href="{{ asset('assets/main.css') }}" />
     </head>
-    <body>
-        <div class="h-screen bg-white flex flex-col space-y-10 justify-center items-center">
+    <body class="bg-main">
+        <div class="h-screen flex flex-col space-y-10 justify-center items-center">
             <div class="bg-white w-96 shadow-xl rounded p-5">
-              <h1 class="text-3xl font-medium">Mexicana</h1>
-              <p class="text-sm">Dashboard Statistics</p>
+              <h1 class="text-3xl font-medium text-center">Mexicana</h1>
+              <p class="text-sm text-center">Dashboard Statistics</p>
               
               <form class="space-y-5 mt-5" method="POST" action="{{ route('login.post') }}">
                 @csrf

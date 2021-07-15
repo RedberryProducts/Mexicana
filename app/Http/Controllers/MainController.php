@@ -23,8 +23,10 @@ class MainController extends Controller
 	public function statistics()
 	{
 		$year = now()->year;
-		$month = (int) request()->get('month') ?? now()->month - 1;
-		
+		$month = request()->has('month') 
+			? (int) request()->get('month') 
+			: now()->month - 1;
+			
 		$statistic = Statistic::query()
 			->whereMonth('created_at', $month + 1)
 			->whereYear('created_at', $year)
