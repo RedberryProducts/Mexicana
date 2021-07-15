@@ -3,9 +3,10 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Laravel</title>
+        <title>Mexicana | Auth</title>
         <link rel="stylesheet" href="{{ asset('assets/tailwind.min.css') }}" />
         <link rel="stylesheet" href="{{ asset('assets/main.css') }}" />
+        <link rel="shortcut icon" href="{{ asset('assets/images/favicon.ico') }}" type="image/x-icon"/>
     </head>
     <body class="bg-main">
         <div class="h-screen flex flex-col space-y-10 justify-center items-center">
