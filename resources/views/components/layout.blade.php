@@ -20,7 +20,14 @@
 						label="Filter by Month"
 					/>
 				</x-sidebar>
-				<div class="h-full ml-14 p-8 mt-14 mb-10 md:ml-64">
+				<div class="h-full p-8 mt-14 mb-10 ml-0 md:ml-64">
+					<div class="flex sm:hidden justify-center">
+						<x-select 
+							:value="get_month($month)" 
+							:values="get_months()"
+							label="Filter by Month"
+						/>
+					</div>
 					{{ $slot }}
 				</div>
 			</div>
