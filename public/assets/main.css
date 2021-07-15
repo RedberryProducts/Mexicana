@@ -1,0 +1,46 @@
+.hide-on-mobile {}
+
+[x-cloak] { 
+    display: none !important; 
+}
+
+.bg-main {
+    background-color: #A7C1AB;
+}
+
+.onmobile{
+    display: none;
+}
+
+.hide-on-desktop{
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .hide-on-mobile {
+        display: none;
+    }
+    .onmobile{
+        display:flex;
+    }
+
+    .hide-on-desktop{
+        display: flex;
+    }
+
+    li{
+        display:flex;
+        align-items: center;
+        white-space: pre-line;
+        padding-right: 0.75rem;
+    }
+
+    li img{
+        padding-right: 0.75rem;
+    }
+
+    .mobile-nav {
+        height: 100%;
+        right: 0; 
+    }
+}
