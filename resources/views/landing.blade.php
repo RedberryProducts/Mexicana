@@ -12,6 +12,27 @@
 <body class="bg-main">
 	<div class="hide-on-mobile flex flex-col justify-between px-24 h-screen m-0 pt-9">
 		<header>
+			<!-- Facebook Pixel Code -->
+			<script>
+				!function(f,b,e,v,n,t,s)
+				{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+				n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+				if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+				n.queue=[];t=b.createElement(e);t.async=!0;
+				t.src=v;s=b.getElementsByTagName(e)[0];
+				s.parentNode.insertBefore(t,s)}(window, document,'script',
+				'https://connect.facebook.net/en_US/fbevents.js');
+				fbq('init', '570993467245659');
+				fbq('track', 'PageView');
+			</script>
+			<noscript>
+				<img 
+					height="1" 
+					width="1" 
+					style="display:none"
+					src="https://www.facebook.com/tr?id=570993467245659&ev=PageView&noscript=1"
+			/></noscript>
+			<!-- End Facebook Pixel Code -->
 			<div class="flex justify-end pr-28 space-x-4">
 				<a href="https://www.facebook.com/mexicanatbilisi/">
 					<img src="{{ asset('assets/images/fb.svg') }}" alt="fblink">
@@ -169,19 +190,5 @@
 
     <script defer src="{{ asset('assets/alpine.min.js') }}"></script>
     <script src="{{ asset('assets/main.js') }}"></script>
-
-    <script>
-        !function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window, document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '570993467245659');
-        fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=570993467245659&ev=PageView&noscript=1" /></noscript>
 </body>
 </html>
