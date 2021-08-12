@@ -79,7 +79,7 @@
 					</form>	
 					<form method="POST" action="{{ route('click') }}">
 						@csrf
-						<input type="hidden" name="link" value="{{ $woltLink }}"/>
+						<input type="hidden" name="link" value="{{ $boltLink }}"/>
 						<input type="hidden" name="restoraunt" value="bolt"/>
 						<img 
 							src="assets/images/bolt.svg" 
