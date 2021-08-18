@@ -55,39 +55,9 @@
 				<img src="{{ asset('assets/images/logomexicana.svg') }}" alt="logomexicana" class="pt-4 w-full">
 	
 				<div class ="flex pt-11">
-					<form method="POST" action="{{ route('click') }}">
-						@csrf
-						<input type="hidden" name="link" value="{{ $glovoLink }}"/>
-						<input type="hidden" name="restoraunt" value="glovo"/>
-						<img 
-							src="assets/images/glovo.svg" 
-							class="w-full cursor-pointer"
-							onclick="this.parentNode.submit()"
-							alt="glovo" 
-						/>
-					</form>
-					<form method="POST" action="{{ route('click') }}">
-						@csrf
-						<input type="hidden" name="link" value="{{ $woltLink }}"/>
-						<input type="hidden" name="restoraunt" value="wolt"/>
-						<img 
-							src="assets/images/wolt.svg" 
-							class="w-full cursor-pointer"
-							onclick="this.parentNode.submit()"
-							alt="wolt" 
-						/>	
-					</form>	
-					<form method="POST" action="{{ route('click') }}">
-						@csrf
-						<input type="hidden" name="link" value="{{ $boltLink }}"/>
-						<input type="hidden" name="restoraunt" value="bolt"/>
-						<img 
-							src="assets/images/bolt.svg" 
-							class="w-full cursor-pointer"
-							onclick="this.parentNode.submit()"
-							alt="bolt" 
-						/>	
-					</form>	
+					<x-restoraunt :link="$glovoLink" name="glovo" image="assets/images/glovo.svg" />
+					<x-restoraunt :link="$woltLink" name="wolt" image="assets/images/wolt.svg" />
+					<x-restoraunt :link="$boltLink" name="bolt" image="assets/images/bolt.svg" />
 				</div>
 			</div>
 		</div>
@@ -108,41 +78,9 @@
 				<img src="{{ asset('assets/images/logomexicana.svg') }}" alt="logomexicana">
 			</div>
 			<div class="onmobile flex-col items-center justify-center content-center space-y-2">
-				<form method="POST" action="{{ route('click') }}">
-					@csrf
-					<input type="hidden" name="link" value="{{ $glovoLink }}"/>
-					<input type="hidden" name="restoraunt" value="glovo"/>
-					<img 
-						src="{{ asset('assets/images/glovo-mobile.svg') }}" 
-						alt="glovomobile"  
-						class="w-full"
-						onclick="this.parentNode.submit()"
-					>
-				</form>
-				
-				<form method="POST" action="{{ route('click') }}">
-					@csrf
-					<input type="hidden" name="link" value="{{ $woltLink }}"/>
-					<input type="hidden" name="restoraunt" value="wolt"/>
-					<img 
-						src="{{ asset('assets/images/wolt-mobile.svg') }}" 
-						alt="woltmobile"  
-						class="w-full"
-						onclick="this.parentNode.submit()"
-					>
-				</form>
-				
-				<form method="POST" action="{{ route('click') }}">
-					@csrf
-					<input type="hidden" name="link" value="{{ $boltLink }}"/>
-					<input type="hidden" name="restoraunt" value="bolt"/>
-					<img 
-						src="{{ asset('assets/images/bolt-mobile.svg') }}" 
-						alt="woltmobile"  
-						class="w-full"
-						onclick="this.parentNode.submit()"
-					>
-				</form>
+				<x-restoraunt :link="$glovoLink" name="glovo" image="assets/images/glovo-mobile.svg" />
+				<x-restoraunt :link="$woltLink" name="wolt" image="assets/images/wolt-mobile.svg" />
+				<x-restoraunt :link="$boltLink" name="bolt" image="assets/images/bolt-mobile.svg" />
 			</div>
 		</div>
 

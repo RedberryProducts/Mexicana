@@ -5,7 +5,7 @@ use App\Http\Controllers\MainController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [MainController::class ,'landing']);
-Route::post('click', [MainController::class, 'click'])->name('click');
+Route::get('click', [MainController::class, 'click'])->name('click');
 
 Route::middleware('guest')->group(function() {
 	Route::view('login', 'auth')->name('login.get');
